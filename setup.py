@@ -61,6 +61,7 @@ install_requires = [
     'six>=1.11.0',
     'cheroot>=6.2.4',
     'portend>=2.1.1',
+    'cryptography==2.2.2',
 ]
 
 extras_require = {
@@ -80,7 +81,6 @@ extras_require = {
 
         # cherrypy.lib.gctools
         'objgraph',
-
         'pytest>=2.8',
         'pytest-cov',
         'pytest-sugar',

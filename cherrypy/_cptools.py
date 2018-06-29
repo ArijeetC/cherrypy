@@ -30,7 +30,7 @@ from cherrypy._helper import expose
 from cherrypy.lib import cptools, encoding, static, jsontools
 from cherrypy.lib import sessions as _sessions, xmlrpcutil as _xmlrpc
 from cherrypy.lib import caching as _caching
-from cherrypy.lib import auth_basic, auth_digest
+from cherrypy.lib import auth_basic, auth_digest, auth_sign
 
 
 def _getargs(func):
@@ -504,6 +504,7 @@ _d.json_in = Tool('before_request_body', jsontools.json_in, priority=30)
 _d.json_out = Tool('before_handler', jsontools.json_out, priority=30)
 _d.auth_basic = Tool('before_handler', auth_basic.basic_auth, priority=1)
 _d.auth_digest = Tool('before_handler', auth_digest.digest_auth, priority=1)
+_d.auth_sign = Tool('before_handler', auth_sign.signature_auth, priority=1)
 _d.params = Tool('before_handler', cptools.convert_params, priority=15)
 
 del _d, cptools, encoding, static
