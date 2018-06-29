@@ -20,7 +20,7 @@ from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import padding
 
 
-def signature_auth(realm, key_file, debug=True):
+def signature_auth(realm, key_file, debug=False):
     """Perform digital signature authentication for the given request..
 
     If the request has a 'signature' header with a signature and a timestamp,
