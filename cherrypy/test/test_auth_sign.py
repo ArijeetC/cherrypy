@@ -39,17 +39,17 @@ class SignAuthTest(helper.CPWebCase):
             '/basic': {
                 'tools.auth_sign.on': True,
                 'tools.auth_sign.realm': 'wonderland',
-                'tools.auth_sign.key_file': 'cherrypy/test/test_private.pem',
+                'tools.auth_sign.key_file': 'cherrypy/test/test_public.pem',
             },
             '/basic2': {
                 'tools.auth_sign.on': True,
                 'tools.auth_sign.realm': 'wonderland',
-                'tools.auth_sign.key_file': 'cherrypy/test/test_private.pem',
+                'tools.auth_sign.key_file': 'cherrypy/test/test_public.pem',
             },
             '/basic2_u': {
                 'tools.auth_sign.on': True,
                 'tools.auth_sign.realm': 'wonderland',
-                'tools.auth_sign.key_file': 'cherrypy/test/test_private.pem',
+                'tools.auth_sign.key_file': 'cherrypy/test/test_public.pem',
             },
         }
 
