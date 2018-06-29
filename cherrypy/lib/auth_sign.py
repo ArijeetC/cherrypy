@@ -44,16 +44,17 @@ def signature_auth(realm, key_file, debug=False):
         raise ValueError('Realm cannot contain the " (quote) character.')
     request = cherrypy.serving.request
 
-    auth_header = request.headers.get('signature')
+    sign_header = request.headers.get('signature')
+    message_header = request.headers.get('message')
 
-    if auth_header is not None:
+    if sign_header is not None and message_header is not None:
         # split() error, base64.decodestring() error
         msg = 'Bad Request'
         with cherrypy.HTTPError.handle((ValueError, binascii.Error), 400, msg):
 
-            keys = auth_header.split('-')
-            signature = keys[0]
-            message = keys[1]
+            # keys = auth_header.split('-')
+            signature = sign_header
+            message = message_header
 
             if _verify_signature(signature, message, key_file):
                 if debug:

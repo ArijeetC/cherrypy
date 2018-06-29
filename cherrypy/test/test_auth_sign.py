@@ -74,11 +74,11 @@ class SignAuthTest(helper.CPWebCase):
         )
 
         self.getPage('/basic/',
-                     [('Signature', 'MjD0h1/Yj/J6KCaJ89j/BBGL3jeHpUOtKxOI4/W73ydoREXsFKMWbBHAIGV4cZ0fkWLZjG88V9KA8BOiM7TMXik3BKjCxIQU3moBGNbZaG39M7d7SMr+neXj7mNCk80VJQXG7HBT1CyEswwqTtA7kUl+4238QgbGIOUi5LnICUuXx0dloRjnp+x6CLfzGly0Od4z2TqWK5vv2JowJGyRqixQbgnhkGPDicqA6sblQ7r85ZLka6Sc3Pml12ifU6WH7ycS7h5fX0WAncaTArAQMNaCukkxJLbMMSSXik0q1Xtbwe9eaUBrmoyrRV5yjt9nEppfaRBHQcHvq5NJRpKh+Q==-152593727144')])  # noqa: E501
+                     [('Signature', 'MjD0h1/Yj/J6KCaJ89j/BBGL3jeHpUOtKxOI4/W73ydoREXsFKMWbBHAIGV4cZ0fkWLZjG88V9KA8BOiM7TMXik3BKjCxIQU3moBGNbZaG39M7d7SMr+neXj7mNCk80VJQXG7HBT1CyEswwqTtA7kUl+4238QgbGIOUi5LnICUuXx0dloRjnp+x6CLfzGly0Od4z2TqWK5vv2JowJGyRqixQbgnhkGPDicqA6sblQ7r85ZLka6Sc3Pml12ifU6WH7ycS7h5fX0WAncaTArAQMNaCukkxJLbMMSSXik0q1Xtbwe9eaUBrmoyrRV5yjt9nEppfaRBHQcHvq5NJRpKh+Q=='), ('Message', '152593727144')])  # noqa: E501
         self.assertStatus(401)
 
         self.getPage('/basic/',
-                     [('Signature', 'EBOw4I9HnwMNZL3TdLfRzA9uqi8qSuOqsD7WiUtoM4zJzKk9wvXmbojBUwxdLS/poNPmgzIh2bEOTJ9dlZvVrxHG4DId9K+2gVEaQykAwFQ3/tZpAuYXTdY6vvF+ZTuYSV3+67LkvJfrWIYrewDMSzYeMr0BFY+rQQeB728g0VqYhvlrj35g/zquUTGLHy6ebJnaEKFdx04KuzWnSGoXy5vt98f7wLFcOEE5/Y/No0WZVjULF5sK75pQCLEAGuTOOE1EgVxCJCM3JUV3akybWoP6YGOJt7tUA/6de9v6eMtlBNEoaA7mQszH9JYch+ClOxPVTK1SoxLrPQmrSJshLA==-1530191775584')])  # noqa: E501
+                     [('Signature', 'EBOw4I9HnwMNZL3TdLfRzA9uqi8qSuOqsD7WiUtoM4zJzKk9wvXmbojBUwxdLS/poNPmgzIh2bEOTJ9dlZvVrxHG4DId9K+2gVEaQykAwFQ3/tZpAuYXTdY6vvF+ZTuYSV3+67LkvJfrWIYrewDMSzYeMr0BFY+rQQeB728g0VqYhvlrj35g/zquUTGLHy6ebJnaEKFdx04KuzWnSGoXy5vt98f7wLFcOEE5/Y/No0WZVjULF5sK75pQCLEAGuTOOE1EgVxCJCM3JUV3akybWoP6YGOJt7tUA/6de9v6eMtlBNEoaA7mQszH9JYch+ClOxPVTK1SoxLrPQmrSJshLA=='), ('Message', '1530191775584')])  # noqa: E501
         self.assertStatus('200 OK')
         self.assertBody("Hello, you've been authorized.")
 
